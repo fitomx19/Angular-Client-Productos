@@ -10,7 +10,7 @@ import { Categoria } from "src/app/modelo/categoria";
     providedIn : 'root'
 })
 export class CategoriaService {
-    private endPoint : string = 'http://localhost:8080/api/categoria';
+    private endPoint : string = 'https://mighty-fjord-48440.herokuapp.com/api/categoria';
     constructor (private http : HttpClient) {}
     private httpHeaders = new HttpHeaders({'ContentType':'application/json'})
     listadoCategorias(): Observable<Categoria[]>{
