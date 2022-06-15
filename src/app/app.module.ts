@@ -10,6 +10,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ListadoComponent } from './categoria/listado/listado.component';
+import { BusquedaComponent } from './categoria/busqueda/busqueda.component';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { ListadoComponent } from './categoria/listado/listado.component';
     BienvenidoComponent,
     ProductoComponent,
     ListadoComponent,
-    ListadoComponent
+    ListadoComponent,
+    BusquedaComponent,
+ 
   ],
   imports: [
     BrowserModule,

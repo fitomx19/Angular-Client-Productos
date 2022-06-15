@@ -5,6 +5,15 @@ export class Categoria {
     //fecha : String = '';
     
 }
+
+
+export class CategoriaUpdate {
+    idCategoriaupdate : number = 0;
+    nombreCategoriaupdate : string = '';
+    descripcionCategoriaupdate : string = '';
+    //fecha : String = '';
+    
+}
 //ng generate class modelo/categoria
 
 //crear timestamp
