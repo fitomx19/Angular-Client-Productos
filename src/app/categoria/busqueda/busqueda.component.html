@@ -3,17 +3,11 @@
         <div class="form-group py-3">
             <label>Busca por nombre categoria: </label>
             <form>
-                <div class="form-group"><input type="text" [(ngModel)]="categoria.idCategoria"#ctrl="ngModel"  name="busqueda" class="form-control"></div>
+                <div class="form-group"><input type="number" [(ngModel)]="categoria.idCategoria"#ctrl="ngModel"  name="busqueda" class="form-control"></div>
                 <div class="form-group"><button  name ="Buscar" class="btn btn-info form-control" (click)="busqueda(categoria)" >Buscar</button></div>
             </form>
         </div>
-        <div class=" h-100">
-            <tr *ngFor="let categoria of listaDeCategorias">
-                <td>{{ categoria.idCategoria }} </td>
-                <td>{{ categoria.nombreCategoria }}</td>
-                <td>{{ categoria.descripcionCategoria }}</td>           
-              </tr>
-        </div>
+        
     </div>
 </div>
 

@@ -13,28 +13,12 @@ export class ListadoComponent implements OnInit {
 
     {
       idCategoria : 1,
-      nombreCategoria : 'yo1',
-      descripcionCategoria: 'ya'
-  
-    },
-    {
-      idCategoria : 2,
-      nombreCategoria : 'yo2',
-      descripcionCategoria: 'ya'
-  
-    },
-    {
-      idCategoria : 3,
-      nombreCategoria : 'yo3',
-      descripcionCategoria: 'ya'
-  
-    },
-    {
-      idCategoria : 4,
-      nombreCategoria : 'yo4',
-      descripcionCategoria: 'ya'
+      nombreCategoria : 'Servidor Cargando',
+      descripcionCategoria: 'Espere..'
   
     }
+   
+   
   ];
   categoria: Categoria = new Categoria();
   categoriaupdate: CategoriaUpdate = new CategoriaUpdate();
