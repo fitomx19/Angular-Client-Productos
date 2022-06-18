@@ -1,1 +1,66 @@
-<p>producto works!</p>
+<div class="container">
+    <div class="card border-info mb-3">
+      <div class="card-header text-dark">
+        <h2 class="text-center">
+          {{ titulo }}
+        </h2>
+      </div>
+      <div class="card-body text-dark table-responsive">
+        <form>
+          <div class="mb-3 mt-5">
+            <label> Nombre del Producto </label>
+            <input
+              type="text"
+              class="form-control"
+              name="nombre"
+              required
+              [(ngModel)]="producto.nombreProducto"
+            />
+          </div>
+  
+          <div class="mb-3 mt-5">
+            <label> Descripcion del producto </label>
+            <input
+              type="text"
+              class="form-control"
+              name="categoria"
+              required
+              [(ngModel)]="producto.descripcionProducto"
+            />
+          </div>
+          <div class="mb-3 mt-5">
+            <label> Precio del producto </label>
+            <input
+              type="text"
+              class="form-control"
+              name="categoria"
+              required
+              [(ngModel)]="producto.precioProducto"
+            />
+          </div>
+          <div class="mb-3 mt-5">
+            <label> Existencia del producto </label>
+            <input
+              type="text"
+              class="form-control"
+              name="categoria"
+              required
+              [(ngModel)]="producto.existencia"
+            />
+          </div>
+
+
+  
+          <div class="mb-3 mt-5">
+            <button
+              class="btn btn-outline-warning form-control"
+              (click)="almacenarProducto()"
+            >
+              Insertar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

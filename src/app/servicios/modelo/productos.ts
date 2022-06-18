@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import { Producto } from "src/app/modelo/producto";
+import { Producto,ProductoInsertar } from "src/app/modelo/producto";
 
 
 @Injectable({ 
@@ -25,6 +25,12 @@ export class ProductosService {
         );
       }
 
+      getProductos(): Observable<ProductoInsertar[]> {
+        return this.http.get(this.endPoint).pipe(
+          map(response => response as ProductoInsertar[])
+        );
+      }
+
   eliminarCategoria(id: number): Observable<Producto> {
     return this.http.delete<Producto>(`${this.endPoint}/${id}`, {headers: this.httpHeaders});
   }
@@ -33,12 +39,12 @@ export class ProductosService {
     return this.http.get<Producto>(`${this.endPoint}/${id}`);
   }
 
-  crearCategoria(category: Producto): Observable<Producto> {
-    return this.http.post<Producto>(this.endPoint, category, {headers: this.httpHeaders});
+  crearProducto(a: ProductoInsertar): Observable<ProductoInsertar> {
+    return this.http.post<ProductoInsertar>(this.endPoint, a, {headers: this.httpHeaders});
   }
 
-  actualizarCategoria(category: Producto , id: number): Observable<Producto> {
-    return this.http.put<Producto>(`${this.endPoint}/${id}`, category, {headers: this.httpHeaders});
+  actualizarProducto(category: ProductoInsertar , id: number): Observable<ProductoInsertar> {
+    return this.http.put<ProductoInsertar>(`${this.endPoint}/${id}`, category, {headers: this.httpHeaders});
   }
 
   buscarCategoria(term: number): Observable<Producto[]> {
