@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import { Producto } from "src/app/modelo/producto";
+import { Producto,ProductoInsertar } from "src/app/modelo/producto";
 
 
 @Injectable({ 
@@ -33,8 +33,8 @@ export class ProductosService {
     return this.http.get<Producto>(`${this.endPoint}/${id}`);
   }
 
-  crearCategoria(category: Producto): Observable<Producto> {
-    return this.http.post<Producto>(this.endPoint, category, {headers: this.httpHeaders});
+  crearProducto(a: ProductoInsertar): Observable<ProductoInsertar> {
+    return this.http.post<ProductoInsertar>(this.endPoint, a, {headers: this.httpHeaders});
   }
 
   actualizarCategoria(category: Producto , id: number): Observable<Producto> {
