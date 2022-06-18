@@ -11,7 +11,9 @@ import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ListadoComponent } from './categoria/listado/listado.component';
 import { BusquedaComponent } from './categoria/busqueda/busqueda.component';
-
+import { ProductosComponent } from './producto/productos/productos.component';
+import {ListadoProductosComponent} from './producto/productos/listado/listado.component';
+import { BusquedaproductosComponent } from './producto/productos/busquedaproductos/busquedaproductos.component'
 
 @NgModule({
   declarations: [
@@ -22,8 +24,10 @@ import { BusquedaComponent } from './categoria/busqueda/busqueda.component';
     BienvenidoComponent,
     ProductoComponent,
     ListadoComponent,
-    ListadoComponent,
+    ListadoProductosComponent,
     BusquedaComponent,
+    ProductosComponent,
+    BusquedaproductosComponent,
  
   ],
   imports: [
