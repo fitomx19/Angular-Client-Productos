@@ -31,6 +31,8 @@
           <th>Clave</th>
           <th>Nombre</th>
           <th>Descripción</th>
+          <th>Existencia</th>
+          <th>Precio</th>
           <th>Id Categoria</th>
           <th>Actualizar</th>
           <th>Eliminar</th>
@@ -41,6 +43,8 @@
           <td>{{ producto.idProducto }} </td>
           <td>{{ producto.nombreProducto }}</td>
           <td>{{ producto.descripcionProducto }}</td>
+          <td>{{ producto.existencia }}</td>
+          <td>${{ producto.precioProducto }}.00</td>
           <td> {{ producto.idCategoria| json }}</td>
 
           <!-- Modal -->
@@ -67,6 +71,7 @@
 
           
         </tr>
+       
       </tbody>
     </table>
   </div>

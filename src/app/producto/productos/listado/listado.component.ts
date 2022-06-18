@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Producto } from 'src/app/modelo/producto';
+import { Producto,ProductoInsertar } from 'src/app/modelo/producto';
 import { ProductosService } from 'src/app/servicios/modelo/productos';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 @Component({
@@ -20,24 +20,26 @@ export class ListadoProductosComponent implements OnInit {
       existencia : 2,
       nombreProducto: "adolfo",
       precioProducto: 20
-  
     }
    
    
   ];
-  productos: Producto = new Producto();
 
+  listaProductosInsertar: ProductoInsertar[] = [];
+  productos: Producto = new Producto();
+  productosInsert: ProductoInsertar = new ProductoInsertar();
 
   constructor(private servicio : ProductosService) { }
   numero : number = 0;
   idProductoProducto  : number = 0;
 
   ngOnInit(): void {
+  
     this.servicio.getCategorias().subscribe(
       (Productos) => this.listaProductos = Productos
     );
-    console.log(this.listaProductos[0].idCategoria)
-
+    
+   
   }
 
   eliminar(producto: Producto): void {
@@ -71,7 +73,7 @@ export class ListadoProductosComponent implements OnInit {
   actualizar(producto: Producto): void {
     console.log(producto)
     console.log(this.idProductoProducto)
-    this.servicio.actualizarCategoria(producto,this.idProductoProducto).subscribe(
+    this.servicio.actualizarProducto(producto,this.idProductoProducto).subscribe(
       () => {
         console.log(producto)
         console.log(this.idProductoProducto)
