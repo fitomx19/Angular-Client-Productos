@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="section">
+        <div class="form-group py-3">
+            <label>Busca por id Producto: </label>
+            <form>
+                <div class="form-group"><input type="number" [(ngModel)]="productos.idProducto"#ctrl="ngModel"  name="busqueda" class="form-control"></div>
+                <div class="form-group"><button  name ="Buscar" class="btn btn-info form-control" (click)="busqueda(productos)" >Buscar</button></div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+

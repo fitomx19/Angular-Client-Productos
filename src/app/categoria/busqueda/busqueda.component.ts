@@ -24,16 +24,20 @@ export class BusquedaComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.servicio.getCategorias().subscribe(
+      (Categorias) => this.listaDeCategorias = Categorias
+    );
   }
 
   busqueda(categoria: Categoria ): void {
    
     this.servicio.buscarCategoria(categoria.idCategoria).subscribe(
       () => {
-      this.listaDeCategorias = this.listaDeCategorias.filter(c => c !== categoria)
+      var x = (this.listaDeCategorias.filter(x  => x.idCategoria == categoria.idCategoria));
+    
       Swal.fire(
         'Encontrado!',
-        `La categoría ${categoria.idCategoria} se ha encontrado`,
+        `La categoría ${categoria.idCategoria} - ${x[0].nombreCategoria} se ha encontrado con la descripcion ${x[0].descripcionCategoria}`,
         'success'
       )
       }
