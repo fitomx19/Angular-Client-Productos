@@ -70,12 +70,12 @@ export class ListadoProductosComponent implements OnInit {
   }
 
 
-  actualizar(producto: Producto): void {
-    console.log(producto)
+  actualizar(a: ProductoInsertar): void {
+    console.log(a)
     console.log(this.idProductoProducto)
-    this.servicio.actualizarProducto(producto,this.idProductoProducto).subscribe(
+    this.servicio.actualizarProducto(a,this.idProductoProducto).subscribe(
       () => {
-        console.log(producto)
+        console.log(a)
         console.log(this.idProductoProducto)
         Swal.fire(
           'Producto Almacenado Satisfactoriamente',
